@@ -1,62 +1,81 @@
 <!DOCTYPE html>
 <html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fattoria Branciana</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <script src="javascript.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
-</head>
-<body>
-<nav class="navbar">
-<div class="navbar-left">Fattoria Branciana</div>
-<div class="navbar-right"><a href="#home">Pagina Iniziale</a> <a href="#about">Informazioni</a> <a href="#prodotti">Prodotti</a> <a href="#contatti">Contatti</a></div>
-</nav>
-<section id="home" class="home-section">
-<div class="overlay">
-<h1>Benvenuti alla <br />Fattoria Branciana</h1>
-</div>
-</section>
-<section id="about" class="info-section">
-<div class="info-container">
-<div class="info-image"><img src="foto/Vista.jpg" /></div>
-<div class="info-text">
-<h2>Chi Siamo</h2>
-<p>Il nostro agriturismo &egrave; un rifugio perfetto per chi cerca una fuga rilassante. Situato nel cuore della campagna reggiana offriamo un&rsquo;esperienza unica di pace e tranquillit&agrave;. I nostri ospiti possono godere di panorami mozzafiato, delizie culinarie fatte in casa e passeggiate all&rsquo;aperto che collegano corpo e mente alla natura.</p>
-</div>
-</div>
-</section>
-<section id="prodotti" class="products-section">
-<div class="products-container">
-<div class="products-text">
-<h2>I nostri prodotti</h2>
-<p>Nell'Agriturismo Fattoria Branciana, siamo orgogliosi di offrire prodotti genuini e fatti in casa, coltivati direttamente nei nostri campi. Tutti i nostri prodotti sono preparati con ingredienti freschi e di stagione, per garantirvi il massimo della qualit&agrave;.</p>
-<p>Durante il vostro soggiorno potrete acquistare e gustare marmellate artigianali, sughi di pomodoro, vini locali, bevande fresche e tante altre delizie fatte con passione e cura.</p>
-</div>
-<div class="products-images">
-<div class="image-grid"><img src="./foto/marmellata.jpg" alt="Marmellata artigianale" /> <img src="./foto/vite.jpg" alt="Vite" /> <img src="./foto/sugo.jpg" alt="Sugo di pomodoro" /> <img src="./foto/oche.jpg" alt="Allevamenti" /></div>
-</div>
-</div>
-</section>
-<section id="contatti" class="contatti">
-<div class="contatti-container"><!-- Google Maps nella parte sinistra -->
-<div class="map-container"><iframe style="border: 0;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2842.405744843433!2d10.445064975621863!3d44.56826617107334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4780094c27dbf62b%3A0x574e02859c173051!2sFattoria%20Branciana!5e0!3m2!1sit!2sit!4v1733475649355!5m2!1sit!2sit" width="100%" height="300" allowfullscreen="allowfullscreen"></iframe></div>
-<!-- Contatti nella parte destra -->
-<div class="contact-info">
-<h2>Contattaci</h2>
-<ul>
-<li><strong>Telefono Fisso:</strong> 05221707690</li>
-<li><strong>Telefono Cellulare:</strong> 3201747009</li>
-<li><strong>Indirizzo:</strong> Via Rossena 93, 42026 Rossena, Italia</li>
-<li><strong>Email:</strong> fattoria.branciana@gmail.com</li>
-</ul>
-<a class="booking-button" href="https://www.booking.com/hotel/it/fattoria-branciana.it.html?label=msn-TTyy9TEpIuEFZnPLxu9OdA-80195776091324%3Atikwd-80195928395366%3Aloc-93%3Aneo%3Amte%3Alp1885%3Adec%3Aqsfattoria+branciana&amp;sid=33e424856b21b61711bda3cf9d8a031d&amp;utm_source=bing&amp;utm_medium=cpc&amp;utm_term=TTyy9TEpIuEFZnPLxu9OdA&amp;utm_campaign=Hotel+-+Italy+-+Other&amp;aid=2276568&amp;ucfs=1&amp;arphpl=1&amp;dest_id=-126865&amp;dest_type=city&amp;group_adults=2&amp;req_adults=2&amp;no_rooms=1&amp;group_children=0&amp;req_children=0&amp;hpos=1&amp;hapos=1&amp;sr_order=popularity&amp;srpvid=8f4d36ef97830318&amp;srepoch=1733471331&amp;from=searchresults" target="_blank" rel="noopener">Prenota il Tuo Soggiorno</a></div>
-</div>
-</section>
-<footer>
-<p>Fattoria Branciana.</p>
-</footer>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fattoria Branciana</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <script src="javascript.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="navbar-left">Fattoria Branciana</div>
+            <div class="navbar-right">
+                <a href="#home">Pagina Iniziale</a>
+                <a href="#about">Informazioni</a>
+                <a href="#camere">Camere</a>
+                <a href="#prodotti">Prodotti</a>
+                <a href="#contatti">Contatti</a>
+            </div>
+        </nav>
+        <section id="home" class="home-section">
+            <div class="overlay">
+                <h1>Benvenuti alla <br />Fattoria Branciana</h1>
+            </div>
+        </section>
+        <section id="about" class="info-section">
+            <div class="info-container">
+                <div class="info-image"><img src="foto/Vista.jpg" /></div>
+                <div class="info-text">
+                    <h2>Chi Siamo</h2>
+                    <p>Il nostro agriturismo &egrave; un rifugio perfetto per chi cerca una fuga rilassante. Situato nel cuore della campagna reggiana offriamo un&rsquo;esperienza unica di pace e tranquillit&agrave;. I nostri ospiti possono godere di panorami mozzafiato, delizie culinarie fatte in casa e passeggiate all&rsquo;aperto che collegano corpo e mente alla natura.</p>
+                </div>
+            </div>
+        </section>
+        <section id="camere" class="camere-section">
+            <div class="camere-container">
+                <div class="camere-text">
+                    <h2>Le nostre camere</h2>
+                    <p>Nella nostra struttura, ogni camera è stata pensata per offrire il massimo comfort, mantenendo il fascino autentico della vita di campagna, il nostro obiettivo è quello di offrire un'atmosfera accogliente e familiare, perfetta per chi cerca tranquillità e semplicità.</br>
+                        Disponiamo di quattro camere, ognuna dotata di salottino privato e bagno interno, per garantirvi un soggiorno riservato e confortevole. Una delle camere è stata progettata con particolare attenzione per essere accessibile alle persone in carrozzina, perché per noi l'ospitalità è per tutti.</p>
+                    <a class="camere-button" href="camere.html" target="_blank" rel="noopener">Dettagli</a>
+                </div>
+                <div class="camere-image">
+                   <img src="./foto/disimpegno-lupo.jpg" alt="soggiorno" />
+                </div>
+            </div>
+        </section>
+        <section id="prodotti" class="products-section">
+            <div class="products-container">
+                <div class="products-images">
+                    <div class="image-grid"><img src="./foto/marmellata.jpg" alt="Marmellata artigianale" /> <img src="./foto/vite.jpg" alt="Vite" /> <img src="./foto/sugo.jpg" alt="Sugo di pomodoro" /> <img src="./foto/oche.jpg" alt="Allevamenti" /></div>
+                </div>
+                <div class="products-text">
+                    <h2>I nostri prodotti</h2>
+                    <p>Nell'Agriturismo Fattoria Branciana, siamo orgogliosi di offrire prodotti genuini e fatti in casa, coltivati direttamente nei nostri campi. Tutti i nostri prodotti sono preparati con ingredienti freschi e di stagione, per garantirvi il massimo della qualit&agrave;.</p>
+                    <p>Durante il vostro soggiorno potrete acquistare e gustare marmellate artigianali, sughi di pomodoro, vini locali, bevande fresche e tante altre delizie fatte con passione e cura.</p>
+                </div>
+            </div>
+        </section>
+        <section id="contatti" class="contatti">
+            <div class="contatti-container"><!-- Google Maps nella parte sinistra -->
+            <div class="map-container"><iframe style="border: 0;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2842.405744843433!2d10.445064975621863!3d44.56826617107334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4780094c27dbf62b%3A0x574e02859c173051!2sFattoria%20Branciana!5e0!3m2!1sit!2sit!4v1733475649355!5m2!1sit!2sit" width="100%" height="300" allowfullscreen="allowfullscreen"></iframe></div>
+            <!-- Contatti nella parte destra -->
+            <div class="contact-info">
+            <h2>Contattaci</h2>
+            <ul>
+            <li><strong>Telefono Fisso:</strong> 05221707690</li>
+            <li><strong>Telefono Cellulare:</strong> 3201747009</li>
+            <li><strong>Indirizzo:</strong> Via Rossena 93, 42026 Rossena, Italia</li>
+            <li><strong>Email:</strong> fattoria.branciana@gmail.com</li>
+            </ul>
+            <a class="booking-button" href="https://www.booking.com/hotel/it/fattoria-branciana.it.html?label=msn-TTyy9TEpIuEFZnPLxu9OdA-80195776091324%3Atikwd-80195928395366%3Aloc-93%3Aneo%3Amte%3Alp1885%3Adec%3Aqsfattoria+branciana&amp;sid=33e424856b21b61711bda3cf9d8a031d&amp;utm_source=bing&amp;utm_medium=cpc&amp;utm_term=TTyy9TEpIuEFZnPLxu9OdA&amp;utm_campaign=Hotel+-+Italy+-+Other&amp;aid=2276568&amp;ucfs=1&amp;arphpl=1&amp;dest_id=-126865&amp;dest_type=city&amp;group_adults=2&amp;req_adults=2&amp;no_rooms=1&amp;group_children=0&amp;req_children=0&amp;hpos=1&amp;hapos=1&amp;sr_order=popularity&amp;srpvid=8f4d36ef97830318&amp;srepoch=1733471331&amp;from=searchresults" target="_blank" rel="noopener">Prenota il Tuo Soggiorno</a></div>
+            </div>
+        </section>
+        <footer>
+            <p>Fattoria Branciana.</p>
+        </footer>
+    </body>
 </html>
