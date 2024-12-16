@@ -239,6 +239,65 @@ body {
     transform: scale(1.05); /* Ingrandisce leggermente l'immagine */
 }
 
+.camere-section{
+    background-color: #ffe4b5;
+    padding-top: 5%;
+}
+
+.camere-container {
+    height: 20%;
+    display: flex;
+    align-items: stretch; /* Allinea verticalmente gli elementi per renderli uguali in altezza */
+    justify-content: space-between;
+}
+
+.camere-image {
+    //flex-shrink: 0; /* Impedisce che l'immagine venga ridotta più del previsto */
+    width: 30%; /* Imposta una larghezza fissa per l'immagine */
+    max-width: 30%; /* La larghezza massima dell'immagine sarà il 30% */
+    min-width: 10px; /* La larghezza minima per evitare che diventi troppo piccola */
+    height: auto; /* Mantiene le proporzioni dell'immagine */
+    margin-right: 4%; /* Spazio tra l'immagine e il bordo destro*/
+    display: flex;
+    border-radius: 8px;
+    align-items: center; /* Allinea verticalmente il contenuto */
+    box-shadow: 0 4px 12px rgba(139, 94, 60, 2.0); /* Ombra marrone */
+}
+
+.camere-image img {
+    width: 100%;
+    height: 100%; /* Impostiamo l'altezza al 100% per farla adattare all'altezza della div */
+    border-radius: 8px;
+    //object-fit: cover;
+}
+
+.camere-text {
+    flex: 2; /* Mantiene il contenitore del testo più grande */
+    max-width: 55%; /* Larghezza massima per il contenitore del testo */
+    min-width: 10px; /* Larghezza minima per evitare che diventi troppo stretto */
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-left: 3%; /* Spazio tra il testo e il bordo sinistro */
+    box-shadow: 0 8px 24px rgba(139, 94, 60, 0.5); /* Ombra marrone */
+}
+
+.camere-text h2 {
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    font-size: 2.2rem; /* Aumenta la dimensione del titolo */
+    color: #8b5e3c;
+    margin-top: 0.3rem;
+    /*margin-bottom: 1.5rem;*/
+}
+
+.camere-text p {
+    font-size: 1.1rem; /* Aumenta la dimensione del testo */
+    line-height: 1.6;
+    color: #555;
+}
+
 .contatti {
     padding: 3rem 5%;
     padding-bottom: 0rem;
@@ -315,7 +374,25 @@ body {
     background-color: #7a4e2f; /* Un marrone più scuro per hover */
 }
 
-
+.camere-button {
+    float: right;
+    align-self: flex-end;
+    height: 1vh;
+    display: inline-block;
+    background-color: #8b5e3c; /* Colore marrone simile alla navbar */
+    color: white;
+    padding: 1rem 2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 1.4rem;
+    border-radius: 6px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+.camere-button:hover {
+    background-color: #7a4e2f; /* Un marrone più scuro per hover */
+}
 
 footer {
     text-align: center;
@@ -390,14 +467,88 @@ body {
 @media (max-width: 480px) {
 
     .navbar {
-        font-size: 0.9rem; /* Font più piccolo per dispositivi molto piccoli */
-        padding: 1.5rem 2%;
-    }
+    font-size: 1rem; /* Font più piccolo per dispositivi mobili */
+    padding: 1rem 2%; /* Riduce il padding per schermi più piccoli */
+    position: fixed; /* Necessario per posizionare il menu */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    .navbar a {
-    	margin-top: 5%;
-        padding: 0.5%; /* "10px 0" Aumenta la distanza tra i link nella navbar */
-    }
+/* Aggiungi spazio a destra per evitare che la scritta si sovrapponga all'icona */
+.navbar-left {
+    padding-right: 3rem; /* Distanza tra la scritta e l'icona hamburger */
+}
+
+/* Nascondi i link inizialmente */
+.navbar-right {
+    display: flex;
+    flex-direction: column; /* Imposta i link in verticale */
+    background-color: #8b5e3c; /* Colore di sfondo */
+    position: fixed; /* Posizione fissa */
+    top: 0;
+    right: -253px; /* Nasconde il menu fuori dalla vista a destra */
+    width: 250px; /* Larghezza del menu */
+    height: 100vh; /* L'altezza copre tutta la schermata */
+    padding-top: 0; /* Rimuove lo spazio sopra i link */
+    gap: 1rem;
+    transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Animazione fluida per entrata */
+    opacity: 1; /* Nasconde il menu inizialmente */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Ombra per dare profondità */
+    border-left: 3px solid #ffe4b5; /* Bordo chiaro a sinistra per separare il menu */
+}
+
+/* Mostra i link a destra quando il menu è attivo */
+.navbar.active .navbar-right {
+    transform: translateX(-250px); /* Sposta il menu da destra a sinistra */
+    opacity: 1; /* Rende visibile il menu */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Ombra più marcata quando il menu è aperto */
+    background-color: #7a4d32; /* Colore di sfondo più scuro quando il menu è aperto */
+}
+
+/* Stile per i link */
+.navbar-right a {
+    color: white;
+    text-align: center;
+    padding: 0.5rem; /* Spazio tra le voci del menu */
+    font-size: 1.2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Separatore sottile tra i link */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transizione per il colore del testo e sfondo */
+}
+
+/* Stile per il hover sugli elementi del menu */
+.navbar-right a:hover {
+    background-color: #8b5e3c; /* Cambia colore di sfondo quando si passa sopra */
+    color: #ffe4b5; /* Cambia il colore del testo */
+}
+
+/* Ultimo link senza bordi */
+.navbar-right a:last-child {
+    border-bottom: none;
+}
+
+/* Mostra l'icona hamburger */
+.navbar::after {
+    content: '☰'; /* Icona hamburger */
+    font-size: 2rem;
+    color: #ffe4b5;
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+}
+
+//    .navbar {
+//        font-size: 0.9rem; /* Font più piccolo per dispositivi molto piccoli */
+//        padding: 1.5rem 2%;
+//    }
+
+//    .navbar a {
+//    	margin-top: 5%;
+//        padding: 0.5%; /* "10px 0" Aumenta la distanza tra i link nella navbar */
+//    }
     
 	.home-section h1 {
     	margin-left: -25%;
@@ -407,6 +558,7 @@ body {
 	}
 
     .info-container {
+        flex-direction: column-reverse;
         width: 100%;
         height: 20%;
         /*margin-top: 4%;*/
@@ -432,37 +584,58 @@ body {
         width: 80%;
         margin-left: 10%;
         margin-right: 10%;
-        margin-top: 20%;
+        margin-top: 10%;
     }
 
-    .info-image img:hover {
-        transform: scale(1); /* Ingrandisce leggermente l'immagine */
-        transition: transform 0.3s ease; /* Effetto hover */
+    .camere-container {
+        margin-top: 15%;
+        flex-direction: column; /* Disposizione verticale delle immagini e del testo */
+        width: 100%;
+        height: 20%;
+        display: flex;
+        align-items: stretch; /* Allinea verticalmente gli elementi per renderli uguali in altezza */
+        justify-content: space-between;
+    }
+
+    .camere-text {
+        width: 80%;
+        margin-left: 8%;
+        margin-right: 10%;
+    	padding: 0.5rem;
+        text-align: center;
+        min-width: 10px;
+        max-width: 90%; /* Larghezza massima per il contenitore del testo */
+    }
+
+    .camere-image {
+	max-width: 80%;
+        min-width: 10px;
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 10%;
     }
 
     .products-container {
-        flex-direction: column; /* Disposizione verticale delle immagini e del testo */
+        flex-direction: column-reverse; /* Disposizione verticale delle immagini e del testo */
     }
 
     .products-section {
         /*margin-top: 2%;*/
-        margin-bottom: 0%;
         padding: 4rem 2%;
         /*background-color: #f4f1e1;*/
     }
 
     .products-container {
+        margin-top: 5%;
         text-align: center;
-        margin-bottom: 0%;
         width: 95%; /* Assicura che il testo occupi tutta la larghezza disponibile */
-        margin-top: 2rem; /* Aggiungi un po' di spazio sopra il testo */
         margin-left: 2.5%;
     }
 
     .products-images {
         text-align: center;
         width: 100%; /* Le immagini occupano tutta la larghezza disponibile */
-        margin-bottom: 2rem; /* Aggiungi uno spazio sotto le immagini */
     }
 
     .product-image {
