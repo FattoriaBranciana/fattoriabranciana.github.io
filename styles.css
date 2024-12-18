@@ -366,7 +366,7 @@ body {
     text-align: center;
     text-decoration: none;
     font-size: 1.2rem;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     transition: background-color 0.3s ease;
 }
 
@@ -392,6 +392,33 @@ body {
 }
 .camere-button:hover {
     background-color: #7a4e2f; /* Un marrone più scuro per hover */
+}
+
+.camera{
+	background-color: #ffe4b5;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 2rem auto;
+	max-width: 900px;
+	padding: 1rem;
+	border-bottom: 2px solid #ccc;
+}
+.camera h2{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.camera{
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+.camera img{
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
 }
 
 footer {
@@ -529,7 +556,7 @@ body {
 
 /* Mostra l'icona hamburger */
 .navbar::after {
-    content: '☰'; /* Icona hamburger */
+    content: ' '; /* Icona hamburger */
     font-size: 2rem;
     color: #ffe4b5;
     cursor: pointer;
@@ -540,15 +567,6 @@ body {
     transform: translateY(-50%);
 }
 
-//    .navbar {
-//        font-size: 0.9rem; /* Font più piccolo per dispositivi molto piccoli */
-//        padding: 1.5rem 2%;
-//    }
-
-//    .navbar a {
-//    	margin-top: 5%;
-//        padding: 0.5%; /* "10px 0" Aumenta la distanza tra i link nella navbar */
-//    }
     
 	.home-section h1 {
     	margin-left: -25%;
