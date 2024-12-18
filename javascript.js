@@ -82,8 +82,3 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", updateNavbar);
     updateNavbar(); // Esegui la funzione all'avvio
 });
-
-    // Eventi per lo Scroll
-    window.addEventListener("scroll", updateNavbar);
-    updateNavbar(); // Esegui la funzione all'avvio
-});
