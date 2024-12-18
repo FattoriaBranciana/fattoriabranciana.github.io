@@ -60,9 +60,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Scroll Smooth per i Link Navbar
     document.querySelectorAll('.navbar a').forEach(link => {
-        link.addEventListener('click', function (e) {
+    link.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href');
+
+        // Se il link è interno (inizia con #), applica lo scroll smooth
+        if (targetId.startsWith('#')) {
             e.preventDefault();
-            const targetId = this.getAttribute('href');
             const targetSection = document.querySelector(targetId);
 
             if (targetSection) {
@@ -71,8 +74,14 @@ document.addEventListener("DOMContentLoaded", function () {
                     behavior: 'smooth'
                 });
             }
-        });
+        }
     });
+});
+
+    // Eventi per lo Scroll
+    window.addEventListener("scroll", updateNavbar);
+    updateNavbar(); // Esegui la funzione all'avvio
+});
 
     // Eventi per lo Scroll
     window.addEventListener("scroll", updateNavbar);
