@@ -77,110 +77,96 @@ body {
 }
 
 section{
-	margin: 0;
-	font-family: Arial, sans-serif;
-	background-color: #ffe4b5; /* Sfondo esterno */
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding-top: 3%;
-	padding-bottom: 2.5%;
-	//min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffe4b5; /* Sfondo esterno */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3%;
+    padding-bottom: 2.5%;
+    //min-height: 100vh;
 }
 
 .section-container {
-	    align-items: center;
-            background-color: white; /* Quadrato bianco */
-            border-radius: 15px; /* Bordi arrotondati */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            display: flex;
-            width: 80%; /* Larghezza quadrato bianco */
-            max-width: 1200px; /* Dimensione massima */
-            overflow: hidden;
-            padding: 20px;
-        }
+        align-items: center;
+        background-color: white; /* Quadrato bianco */
+        border-radius: 15px; /* Bordi arrotondati */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        display: flex;
+        width: 80%; /* Larghezza quadrato bianco */
+        max-width: 1200px; /* Dimensione massima */
+        overflow: hidden;
+        padding: 20px;
+    }
 
-        /* Carosello immagini */
-        .carousel {
-	    display: flex;
-	    max-height:300px;
-            width: 25%; /* 25% della section */
-            position: relative;
-        }
+/* Carosello immagini */
+.carousel {
+    display: flex;
+    max-height:300px;
+    width: 25%; /* 25% della section */
+    position: relative;
+}
 
-        .carousel img {
-            width: 100%;
-	    height: 100%;
-	    object-fit: cover;
-    	    object-position: center;
-            border-radius: 10px; /* Bordi arrotondati per l'immagine */
-            display: none; /* Tutte le immagini nascoste di default */
-        }
+.carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px; /* Bordi arrotondati per l'immagine */
+    display: none; /* Tutte le immagini nascoste di default */
+}
 
-        .carousel img.active {
-            display: block; /* Mostra solo l'immagine attiva */
-        }
+.carousel img.active {
+    display: block; /* Mostra solo l'immagine attiva */
+}
 
-        /* Bottoni carosello */
-        .carousel button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            cursor: pointer;
-            font-size: 1.2em;
-            padding: 5px;
-            border-radius: 50%;
-        }
+/* Bottoni carosello */
+.carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 5px;
+    border-radius: 50%;
+}
 
-        .carousel button.prev {
-            left: 10px;
-        }
+.carousel button.prev {
+    left: 10px;
+}
 
-        .carousel button.next {
-            right: 10px;
-        }
+.carousel button.next {
+    right: 10px;
+}
 
-        /* Contenuto della camera */
-        .content {
-            width: 75%; /* 75% della section */
-            padding: 20px;
-            box-sizing: border-box;
-        }
+/* Contenuto della camera */
+.content {
+    width: 75%; /* 75% della section */
+    padding: 20px;
+    box-sizing: border-box;
+}
 
-        .content h2 {
-            margin: 0 0 10px;
-            font-size: 2em;
-            color: #8c5a3a;
-        }
+.content h2 {
+    margin: 0 0 10px;
+    font-size: 2em;
+    color: #8c5a3a;
+}
 
-        .content p {
-            font-size: 1.1em;
-            line-height: 1.6;
-            color: #555;
-        }
-
+.content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+}
 
 footer {
     text-align: center;
     padding: 1rem;
     background-color: #8b5e3c;
     color: white;
-}
-
-
-
-
-/* Stili generali per schermi larghi (desktop) */
-body {
-    font-family: Arial, sans-serif;
-}
-
-/* Media Query per schermi di dimensione media (come tablet) */
-@media (max-width: 768px) {
-
 }
 
 /* Media Query per schermi piccoli (smartphone) */
@@ -195,89 +181,65 @@ body {
     align-items: center;
 }
 
-/* Aggiungi spazio a destra per evitare che la scritta si sovrapponga all'icona */
 .navbar-left {
-    padding-right: 0rem; /* Distanza tra la scritta e l'icona hamburger */
+    padding-left: 4%; /* Distanza tra la scritta e l'icona hamburger */
 }
 
-/* Nascondi i link inizialmente */
 .navbar-right {
+    display: none;
+}
+
+.content {
+        width: 95%;
+        padding: 20px;
+        box-sizing: border-box;
+}
+
+.carousel {
     display: flex;
-    flex-direction: column; /* Imposta i link in verticale */
-    background-color: #8b5e3c; /* Colore di sfondo */
-    position: fixed; /* Posizione fissa */
-    top: 0;
-    right: -253px; /* Nasconde il menu fuori dalla vista a destra */
-    width: 250px; /* Larghezza del menu */
-    height: 100vh; /* L'altezza copre tutta la schermata */
-    padding-top: 0; /* Rimuove lo spazio sopra i link */
-    gap: 1rem;
-    transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Animazione fluida per entrata */
-    opacity: 1; /* Nasconde il menu inizialmente */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Ombra per dare profondità */
-    border-left: 3px solid #ffe4b5; /* Bordo chiaro a sinistra per separare il menu */
+    max-height:300px;
+    width: 90%;
+    position: relative;
 }
 
-/* Mostra i link a destra quando il menu è attivo */
-.navbar.active .navbar-right {
-    transform: translateX(-250px); /* Sposta il menu da destra a sinistra */
-    opacity: 1; /* Rende visibile il menu */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Ombra più marcata quando il menu è aperto */
-    background-color: #7a4d32; /* Colore di sfondo più scuro quando il menu è aperto */
+.section-cerbiatto{
+	flex-direction: column;
 }
 
-/* Stile per i link */
-.navbar-right a {
+.section-container {
+        flex-direction: column-reverse;        
+}
+
+footer {
+    padding: 1rem;
+}
+
+.mobile-home-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.mobile-home-button a {
+    background-color: #8b5e3c;
     color: white;
-    text-align: center;
-    padding: 0.5rem; /* Spazio tra le voci del menu */
-    font-size: 1.2rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Separatore sottile tra i link */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Transizione per il colore del testo e sfondo */
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
 }
 
-/* Stile per il hover sugli elementi del menu */
-.navbar-right a:hover {
-    background-color: #8b5e3c; /* Cambia colore di sfondo quando si passa sopra */
-    color: #ffe4b5; /* Cambia il colore del testo */
+.mobile-home-button a:hover {
+    background-color: #4d3b2d;
+}
 }
 
-/* Ultimo link senza bordi */
-.navbar-right a:last-child {
-    border-bottom: none;
+/* Nascondi il pulsante su schermi grandi */
+@media (min-width: 481px) {
+    .mobile-home-button {
+        display: none;
+    }
 }
 
-/* Mostra l'icona hamburger */
-.navbar::after {
-    content: ' '; /* Icona hamburger */
-    font-size: 2rem;
-    color: #ffe4b5;
-    cursor: pointer;
-    display: block;
-    position: absolute;
-    top: 50%;
-    right: 2rem;
-    transform: translateY(-50%);
-}
-
-	.content {
-            width: 95%; /* 75% della section */
-            padding: 20px;
-            box-sizing: border-box;
-        }
-
-	.carousel {
-	    display: flex;
-	    max-height:300px;
-            width: 90%; /* 25% della section */
-            position: relative;
-        }
-
-	.section-container {
-	        flex-direction: column-reverse;		
-	}
-
-	footer {
-		padding: 1rem; /* Aggiunge un po' di padding al footer */
-	}
-}
