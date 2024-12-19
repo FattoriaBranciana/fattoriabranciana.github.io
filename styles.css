@@ -493,7 +493,7 @@ body {
 /* Media Query per schermi piccoli (smartphone) */
 @media (max-width: 480px) {
 
-    .navbar {
+	    .navbar {
     font-size: 1rem; /* Font più piccolo per dispositivi mobili */
     padding: 1rem 2%; /* Riduce il padding per schermi più piccoli */
     position: fixed; /* Necessario per posizionare il menu */
@@ -504,12 +504,12 @@ body {
 
 /* Aggiungi spazio a destra per evitare che la scritta si sovrapponga all'icona */
 .navbar-left {
-    padding-right: 3rem; /* Distanza tra la scritta e l'icona hamburger */
+    padding-right: 0%; /* Distanza tra la scritta e l'icona hamburger */
 }
 
 /* Nascondi i link inizialmente */
 .navbar-right {
-    display: flex;
+    display: none;
     flex-direction: column; /* Imposta i link in verticale */
     background-color: #8b5e3c; /* Colore di sfondo */
     position: fixed; /* Posizione fissa */
