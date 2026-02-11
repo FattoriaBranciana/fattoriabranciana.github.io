@@ -259,7 +259,7 @@ body {
     height: auto; /* Mantiene le proporzioni dell'immagine */
     margin-right: 4%; /* Spazio tra l'immagine e il bordo destro*/
     display: flex;
-    border-radius: 8px;
+    /*border-radius: 8px;*/
     align-items: center; /* Allinea verticalmente il contenuto */
     box-shadow: 0 4px 12px rgba(139, 94, 60, 2.0); /* Ombra marrone */
 }
@@ -693,3 +693,4 @@ body {
     footer {
         padding: 1rem; /* Aggiunge un po' di padding al footer */
     }
+
